@@ -3,3 +3,4 @@ css/*.css
 !css/simplegrid.css
 *.min.*
 ./**/*.min.*
+npm-debug.log
