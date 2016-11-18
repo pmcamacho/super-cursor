@@ -33,4 +33,4 @@ site.js &nbsp;&nbsp;**>** &nbsp;&nbsp; your app .js file.
 ## ideas
 
 ## license
-MIT (see [license](license))
+MIT (see [license](LICENSE))
