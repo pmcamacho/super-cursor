@@ -1,6 +1,6 @@
-import * as PointerModule from 'super-cursor'
+import * as SuperCursor from 'super-cursor'
 
-PointerModule.init({
+SuperCursor.init({
   spCallbacks: {
     processSpClassChange: processSpClassChange
   }

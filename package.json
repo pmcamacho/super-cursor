@@ -2,14 +2,14 @@
   "name": "super-cursor",
   "version": "1.0.0",
   "description": "",
-  "main": "./pointer-module.js",
+  "main": "./super-cursor.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
-    "name": "Pedro Camacho",
-    "email": "pmayocamacho@gmail.com",
-    "url": "www.pedrocamacho.com.pt"
+    "name":   "Pedro Camacho",
+    "email":  "pmayocamacho@gmail.com",
+    "url":    "www.pedrocamacho.com.pt"
   },
   "license": "MIT",
   "dependencies": {},

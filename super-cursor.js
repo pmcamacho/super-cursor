@@ -1,7 +1,7 @@
 // SUPER CURSOR
-import * as PointerPositionModule from './lib/pointer-position-module'
-import * as PointerUnderneathClassesModule from './lib/pointer-underneath-classes-module'
-import * as PointerAnimationModule from './lib/pointer-animation-module'
+import * as SuperCursorPosition from './lib/super-cursor-position'
+import * as SuperCursorUnderneath from './lib/super-cursor-underneath'
+import * as SuperCursorAnimation from './lib/super-cursor-animation'
 
 var spCallbacks;
 var lastSpClass;
@@ -15,9 +15,9 @@ function init(config)
   initSpHtmlAnim();
   initCallbacks(config.spCallbacks);
 
-  PointerPositionModule.init();
-  PointerUnderneathClassesModule.init(processUnderneathCssClasses);
-  PointerAnimationModule.init();
+  SuperCursorPosition.init();
+  SuperCursorUnderneath.init(processUnderneathCssClasses);
+  SuperCursorAnimation.init();
 }
 
 function initSpHtml() {

@@ -6,15 +6,15 @@ Work in progress...
 ## description
 Tiny library to enhance the cursor in a web app through CSS3 and JS(ES6).
 
-## modules
+## modules (ES6)
 
-pointer-module.js &nbsp;&nbsp;**>** &nbsp;&nbsp; wrapper aka entry point.
+super-cursor.js &nbsp;&nbsp;**>** &nbsp;&nbsp; wrapper aka entry point.
 
-pointer-position-module.js &nbsp;&nbsp;**>** &nbsp;&nbsp; gives cursor position taking into account mouse move and mouse scroll events.
+super-cursor-position.js &nbsp;&nbsp;**>** &nbsp;&nbsp; gives cursor position taking into account mouse move and mouse scroll events.
 
-pointer-underneath-classes-modules&nbsp;&nbsp;**>** &nbsp;&nbsp; parses css classes in html hovered by the cursor according to a regular expression.
+super-cursor-underneath.js&nbsp;&nbsp;**>** &nbsp;&nbsp; parses css classes in html hovered by the cursor according to a regular expression.
 
-pointer-animation-module.js &nbsp;&nbsp;**>** &nbsp;&nbsp; starts animations based on click events.
+super-cursor-animation.js &nbsp;&nbsp;**>** &nbsp;&nbsp; starts animations based on click events.
 
 site.js &nbsp;&nbsp;**>** &nbsp;&nbsp; your app .js file.
 
