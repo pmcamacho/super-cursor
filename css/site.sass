@@ -1,0 +1,281 @@
+@import html
+@import body
+
+@mixin transform($transforms)
+    -moz-transform: $transforms
+    transform: $transforms
+
+@mixin transform-origin($val)
+    -moz-transform-origin: $val
+    -webkit-transform-origin: $val
+    transform-origin: $val
+
+*
+    cursor: none   // if you want to completly disable default cursor on the page.
+    font-family: "Lucida Console", Monaco, monospace
+    font-size: 20px
+
+.wrapper
+    height: 2000px  // just for the sake of the demonstration you can scroll
+
+.header
+    background-color: black
+    width: 100%
+    height: 100px
+    color: white
+    padding: 10px
+    margin-bottom: 30px
+    margin-top: 30px
+    border-radius: 30px
+
+    a
+        text-decoration: none
+        color: white
+
+.widget
+    background-color: #E6E6E6
+    color: white
+    text-align: center
+    width: 80%
+    height: 150px
+    margin: 0 auto
+    padding: 10px
+    margin-bottom: 30px
+    border-radius: 30px
+
+.scroll-wrapper
+    text-align: center
+
+    .scroll
+        width: 0
+        height: 0
+        margin: 0 auto
+        border-top: 20px solid black
+        border-left: 20px solid transparent
+        border-right: 20px solid transparent
+        border-bottom: 20px solid transparent
+
+    .scroll-show-off
+        text-align: center
+        margin-top: 50%
+        color: black
+
+.invisible
+    visibility: hidden
+
+.visible
+    visibility: visible
+
+.dot-spinner
+    background-color: transparent
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    position: relative
+    display: inline-block
+    animation: rotate-clockwise 5s linear infinite
+
+    .dot
+        background-color: black
+        border-radius: 50%
+        position: absolute
+        width: 10px
+        height: 10px
+        border: 2px solid white
+
+    .dot1
+        top: 20px
+        left: 0px
+        animation: blink 2s linear 0s infinite
+
+    .dot2
+        top: 6px
+        left: 6px
+        animation: blink 2s linear 0.25s infinite
+
+    .dot3
+        top: 0px
+        left: 20px
+        animation: blink 2s linear 0.50s infinite
+
+    .dot4
+        top: 6px
+        left: 34px
+        animation: blink 2s linear 0.75s infinite
+
+    .dot5
+        top: 20px
+        left: 40px
+        animation: blink 2s linear 1s infinite
+
+    .dot6
+        top: 34px
+        left: 34px
+        animation: blink 2s linear 1.25s infinite
+
+    .dot7
+        top: 40px
+        left: 20px
+        animation: blink 2s linear 1.50s infinite
+
+    .dot8
+        top: 34px
+        left: 6px
+        animation: blink 2s linear 1.75s infinite
+
+
+.sp-default-cursor
+    position: relative
+    border-top: 20px solid transparent
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+    border-bottom: 20px solid white
+    transform: rotateZ(-20deg)
+
+    &:before
+        content: ''
+        position: absolute
+        padding-top: 2.5px
+        top: -15px
+        left: -15px
+        right: -15px
+        bottom: -15px
+        border-top: 15px solid transparent
+        border-left: 15px solid transparent
+        border-right: 15px solid transparent
+        border-bottom: 15px solid black
+
+.sp-pointer-cursor
+    position: relative
+    border-top: 20px solid transparent
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+    border-bottom: 20px solid white
+
+    &:after
+        content: ''
+        position: absolute
+        padding-top: 2.5px
+        top: -15px
+        left: -15px
+        right: -15px
+        bottom: -15px
+        border-top: 15px solid transparent
+        border-left: 15px solid transparent
+        border-right: 15px solid transparent
+        border-bottom: 15px solid black
+
+
+.sp-text-cursor
+    background-color: black
+    width: 8px
+    height: 25px
+    border-radius: 5px
+    border: 2px solid white
+
+
+.pointer-move
+    width: auto
+    height: auto
+    position: absolute
+    background-color: transparent
+    box-sizing: border-box
+    pointer-events: none
+
+.pointer-background
+    width: auto
+    height: auto
+    position: absolute
+    background-color: transparent
+    box-sizing: border-box
+    pointer-events: none
+
+    .pointer
+        position: relative
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        opacity: 0
+        box-sizing: border-box
+        background-color: rgba(0, 0, 0, 0.3)
+        animation: click 0.6s linear 0s 1
+        border: 3px solid rgba(255, 255, 255, 0.5)
+
+        &:before, &:after
+            content: ''
+            display: block
+            position: absolute
+            width: 50px
+            height: 50px
+            top: 50%
+            left: 50%
+            border-radius: 50%
+            margin-top: -25px
+            margin-left: -25px
+            opacity: 0
+
+        &:before
+            background-color: rgba(0, 0, 0, 0.5)
+            animation: click 0.6s linear 0.2s 1
+            border: 3px solid white
+
+        &:after
+            background-color: rgba(0, 0, 0, 0.7)
+            animation: click 0.6s linear 0.4s 1
+            border: 3px solid white
+
+
+
+.sp-widget-text
+    width: 230px
+    height: 230px
+    background-color: transparent
+    border: 30px solid green
+    border-radius: 50%
+    position: relative
+    color: black
+    animation: rotate-counterclockwise 5s linear infinite
+
+    span
+        text-align: center
+
+    span span
+        +transform-origin(bottom center)
+        height: 110px
+        position: absolute
+        width: 25px
+        top: 0
+        left: 50%
+        margin-top: -25px
+        margin-left: -10px
+
+    @for $i from 1 through 25
+      .char#{$i}
+        +transform(rotate(($i * 6) + deg))
+
+
+@keyframes blink
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes rotate-clockwise
+    0%
+        transform: rotateZ(0deg)
+    100%
+        transform: rotateZ(360deg)
+
+@keyframes rotate-counterclockwise
+    0%
+        transform: rotateZ(0deg)
+    100%
+        transform: rotateZ(-360deg)
+
+@keyframes click
+    0%
+        transform: scale(0)
+        opacity: 0.8
+    100%
+        transform: scale(1)
+        opacity: 0.1
