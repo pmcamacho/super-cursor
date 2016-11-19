@@ -30,7 +30,7 @@ function initSpHtml () {
 function initSpHtmlAnim () {
   spBackCursorAnim = document.createElement('div');
   spBackCursorAnim.setAttribute('id', 'sp-pointer-back-anim');
-  Utils.addClassName(spBackCursor, 'pointer-background invisible');
+  Utils.addClassName(spBackCursorAnim, 'pointer-background invisible');
   var div = document.createElement('div');
   div.setAttribute('id', 'pointer-anim');
   spBackCursorAnim.appendChild(div);
