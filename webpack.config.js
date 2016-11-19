@@ -32,7 +32,7 @@ module.exports = [{
       {
         test: /\.sass$/,
         exclude: /(node_modules|bower_components)/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader')
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
       }
     ]
   },
