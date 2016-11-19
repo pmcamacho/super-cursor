@@ -1,4 +1,4 @@
-// import * as SuperCursor from 'super-cursor';
+// import * as SuperCursor from 'super-cursor';  // when module available in npm
 import * as SuperCursor from '../super-cursor';
 
 SuperCursor.init({

@@ -19,8 +19,10 @@ super-cursor-animation.js &nbsp;&nbsp;**>** &nbsp;&nbsp; starts animations based
 site.js &nbsp;&nbsp;**>** &nbsp;&nbsp; your app .js file.
 
 ## usage
+soon...
 
 ## examples
+soon...
 
 ## todo
 
@@ -29,8 +31,8 @@ site.js &nbsp;&nbsp;**>** &nbsp;&nbsp; your app .js file.
 - [ ] stack widgets with cursors or vice-versa
 - [ ] make it mobile compatible leveraging multi-touch (only for menu widgets I guess).
 
-
-## ideas
+## notes
+[https://developer.mozilla.org/docs/Mozilla/Performance/ScrollLinkedEffects](https://developer.mozilla.org/docs/Mozilla/Performance/ScrollLinkedEffects)
 
 ## license
 MIT (see [license](LICENSE))
