@@ -2,6 +2,7 @@
 import * as SuperCursorPosition from './lib/super-cursor-position';
 import * as SuperCursorUnderneath from './lib/super-cursor-underneath';
 import * as SuperCursorAnimation from './lib/super-cursor-animation';
+import * as Utils from './lib/utils';
 
 var spCallbacks;
 var lastSpClass;
@@ -22,15 +23,17 @@ function init (config) {
 function initSpHtml () {
   spBackCursor = document.createElement('div');
   spBackCursor.setAttribute('id', 'sp-back-cursor');
-  spBackCursor.classList.add('pointer-move');
+  // spBackCursor.classList.add('pointer-move');
+  Utils.addClassName(spBackCursor, 'pointer-move');
   document.getElementsByTagName('body')[0].appendChild(spBackCursor);
 }
 
 function initSpHtmlAnim () {
   spBackCursorAnim = document.createElement('div');
   spBackCursorAnim.setAttribute('id', 'sp-pointer-back-anim');
-  spBackCursorAnim.classList.add('pointer-background');
-  spBackCursorAnim.classList.add('invisible');
+  // spBackCursorAnim.classList.add('pointer-background');
+  // spBackCursorAnim.classList.add('invisible');
+  Utils.addClassName(spBackCursor, 'pointer-background invisible');
   var div = document.createElement('div');
   div.setAttribute('id', 'pointer-anim');
   spBackCursorAnim.appendChild(div);
@@ -43,16 +46,20 @@ function initMouse () {
   html.addEventListener('mouseenter', function (event) {
     var sp = document.getElementById('sp-back-cursor');
     if (sp !== null) {
-      sp.classList.remove('invisible');
-      sp.classList.add('visible');
+      // sp.classList.remove('invisible');
+      // sp.classList.add('visible');
+      Utils.removeClassName(sp, 'invisible');
+      Utils.addClassName(sp, 'visible');
     }
   });
 
   html.addEventListener('mouseleave', function (event) {
     var sp = document.getElementById('sp-back-cursor');
     if (sp !== null) {
-      sp.classList.remove('visible');
-      sp.classList.add('invisible');
+      // sp.classList.remove('visible');
+      // sp.classList.add('invisible');
+      Utils.removeClassName(sp, 'visible');
+      Utils.addClassName(sp, 'invisible');
     }
   });
 }

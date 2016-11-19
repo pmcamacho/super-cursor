@@ -1,4 +1,5 @@
-import * as SuperCursor from 'super-cursor';
+// import * as SuperCursor from 'super-cursor';
+import * as SuperCursor from '../super-cursor';
 
 SuperCursor.init({
   spCallbacks: {

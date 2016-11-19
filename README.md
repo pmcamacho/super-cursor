@@ -24,7 +24,7 @@ site.js &nbsp;&nbsp;**>** &nbsp;&nbsp; your app .js file.
 
 ## todo
 
-- [ ] change element.classList manipulation, favoring element.className for browser compatibility.
+- [x] change element.classList manipulation, favoring element.className for browser compatibility.
 - [ ] add api endpoint to override cursors or widgets chosen automatically by the library to add more control.
 - [ ] stack widgets with cursors or vice-versa
 - [ ] make it mobile compatible leveraging multi-touch (only for menu widgets I guess).
