@@ -1,4 +1,5 @@
 # super-cursor
+[take a look](https://pmcamacho.github.io/super-cursor/)
 
 ## status
 Work in progress...
